@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multilingual Campus Chatbot 🤖</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-container glass">
+
+    <!-- Top bar with Globe Icon -->
+    <div class="top-bar">
+      <h1>Campus Chatbot 🤖</h1>
+      <div class="lang-container" title="Choose Language">
+        🌎
+        <select id="lang">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="bn">বাংলা</option>
+          <option value="mr">मराठी</option>
+          <option value="te">తెలుగు</option>
+          <option value="ta">தமிழ்</option>
+          <option value="gu">ગુજરાતી</option>
+          <option value="pa">ਪੰਜਾਬੀ</option>
+          <option value="kn">ಕನ್ನಡ</option>
+          <option value="ml">മലയാളം</option>
+          <option value="or">ଓଡ଼ିଆ</option>
+          <option value="raj">राजस्थानी</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chatbox"></div>
+
+    <!-- Input -->
+    <div class="input-area">
+      <input type="text" id="message" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="startListening()">🎤</button>
+    </div>
+  </div>
+
+  <!-- Feedback Section -->
+  <div class="feedback">
+    <h2>💬 What People Say</h2>
+    <h3>👨‍🎓 Students</h3>
+    <p>"No more queues for info — I just ask the chatbot in Hindi anytime!"</p>
+    <p>"I like it speaks my language. Help feels personal."</p>
+    <h3>👩‍👦 Parents</h3>
+    <p>"Earlier I had to call the college office. Now the chatbot gives updates directly."</p>
+    <p>"All important info is in one place, very convenient!"</p>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
